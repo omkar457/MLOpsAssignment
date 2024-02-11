@@ -1,0 +1,14 @@
+[2024-02-04 18:15:11,358] {processor.py:153} INFO - Started process (PID=2018) to work on /home/airflow/dags/Lead_scoring_data_pipeline/lead_scoring_data_pipeline.py
+[2024-02-04 18:15:11,359] {processor.py:641} INFO - Processing file /home/airflow/dags/Lead_scoring_data_pipeline/lead_scoring_data_pipeline.py for tasks to queue
+[2024-02-04 18:15:11,359] {logging_mixin.py:115} INFO - [2024-02-04 18:15:11,359] {dagbag.py:508} INFO - Filling up the DagBag from /home/airflow/dags/Lead_scoring_data_pipeline/lead_scoring_data_pipeline.py
+[2024-02-04 18:15:11,678] {logging_mixin.py:115} INFO - [2024-02-04 18:15:11,676] {dagbag.py:321} ERROR - Failed to import: /home/airflow/dags/Lead_scoring_data_pipeline/lead_scoring_data_pipeline.py
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/airflow/dags/Lead_scoring_data_pipeline/lead_scoring_data_pipeline.py", line 11, in <module>
+    from utils import *
+ModuleNotFoundError: No module named 'utils'
+[2024-02-04 18:15:11,679] {processor.py:653} WARNING - No viable dags retrieved from /home/airflow/dags/Lead_scoring_data_pipeline/lead_scoring_data_pipeline.py
+[2024-02-04 18:15:14,404] {processor.py:161} INFO - Processing /home/airflow/dags/Lead_scoring_data_pipeline/lead_scoring_data_pipeline.py took 3.051 seconds

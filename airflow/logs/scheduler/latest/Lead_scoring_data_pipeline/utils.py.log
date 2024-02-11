@@ -1,0 +1,16 @@
+[2024-02-04 18:14:28,570] {processor.py:153} INFO - Started process (PID=1805) to work on /home/airflow/dags/Lead_scoring_data_pipeline/utils.py
+[2024-02-04 18:14:28,571] {processor.py:641} INFO - Processing file /home/airflow/dags/Lead_scoring_data_pipeline/utils.py for tasks to queue
+[2024-02-04 18:14:28,572] {logging_mixin.py:115} INFO - [2024-02-04 18:14:28,572] {dagbag.py:508} INFO - Filling up the DagBag from /home/airflow/dags/Lead_scoring_data_pipeline/utils.py
+[2024-02-04 18:14:29,213] {logging_mixin.py:115} INFO - [2024-02-04 18:14:29,213] {utils.py:145} INFO - Note: NumExpr detected 64 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2024-02-04 18:14:29,213] {logging_mixin.py:115} INFO - [2024-02-04 18:14:29,213] {utils.py:157} INFO - NumExpr defaulting to 8 threads.
+[2024-02-04 18:14:29,391] {logging_mixin.py:115} INFO - [2024-02-04 18:14:29,389] {dagbag.py:321} ERROR - Failed to import: /home/airflow/dags/Lead_scoring_data_pipeline/utils.py
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.8/site-packages/airflow/models/dagbag.py", line 318, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/home/airflow/dags/Lead_scoring_data_pipeline/utils.py", line 11, in <module>
+    from constants import *
+ModuleNotFoundError: No module named 'constants'
+[2024-02-04 18:14:29,391] {processor.py:653} WARNING - No viable dags retrieved from /home/airflow/dags/Lead_scoring_data_pipeline/utils.py
+[2024-02-04 18:14:31,883] {processor.py:161} INFO - Processing /home/airflow/dags/Lead_scoring_data_pipeline/utils.py took 3.320 seconds

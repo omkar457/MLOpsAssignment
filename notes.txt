@@ -1,0 +1,24 @@
+airflow: 
+airflow db init
+
+airflow users create --username upgrad --firstname upgrad --lastname upgrad --role Admin --email v4vasista@gmail.com --password upgrad
+
+airflow webserver
+
+airflow scheduler
+
+#2 ---------
+
+cd /home/assignment/
+mkdir ./mlruns
+mlflow server --backend-store-uri='sqlite:///./02_training_pipeline/notebooks/lead_scoring_model_experimentation.db' --default-artifact-root="./mlruns" --port=6006 --host=0.0.0.0
+
+
+at Production::::
+
+
+
+mlflow server --backend-store-uri='sqlite:///./airflow/dags/Lead_scoring_training_pipeline/Lead_scoring_mlflow_production.db' --default-artifact-root="./airflow/mlruns" --port=6006 --host=0.0.0.0
+
+
+mlflow server --backend-store-uri='sqlite:///./airflow/dags/Lead_scoring_training_pipeline/Lead_scoring_mlflow_production.db' --default-artifact-root="./mlruns" --port=6006 --host=0.0.0.0
